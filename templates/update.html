@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block head %}
+{% endblock %}
+{% block body %}
+    <div class="container center_div">
+        <h1 style="text-align: center" class="display-1">Update Task</h1>
+        <br>
+        <br>
+        <br>
+
+        <div class="container center_div">
+            <form action="/update/{{ task.id }}" style="text-align:center"
+                  class="row justify-content-center align-items-center"
+                  method="post">
+                <div class="input-group">
+                    <input style="text-align: center" type="text" class="form-control form-control-lg"
+                           name="content"
+                           placeholder="Task" value="{{ task.content }}">
+                </div>
+                <div class="container ">
+                    <div class="col-12">
+                        <br>
+                        <button style="padding: 5px" type="submit" class="btn btn-primary btn-lg btn-block">Update
+                            Task
+                        </button>
+                    </div>
+                </div>
+
+
+            </form>
+
+
+        </div>
+
+
+    </div>
+
+{% endblock %}
